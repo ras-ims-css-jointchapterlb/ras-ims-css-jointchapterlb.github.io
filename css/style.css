@@ -1,0 +1,267 @@
+/* ============================================================
+   IC2AI 2027 — Shared Stylesheet
+   Color palette:
+     --navy:   #001f3f   (primary dark)
+     --cyan:   #00d4ff   (accent)
+     --blue:   #0d6efd   (Bootstrap primary)
+   ============================================================ */
+
+:root {
+    --navy: #001f3f;
+    --navy-deep: #00151e;
+    --cyan: #00d4ff;
+    --blue: #0d6efd;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ── Logo Header ──────────────────────────────────────────── */
+.logo-header {
+    background-color: #ffffff;
+    padding: 35px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.logo-header img {
+    max-height: 110px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+.navbar {
+    background-color: var(--navy) !important;
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+}
+.navbar-brand {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+.nav-link {
+    color: #ffffff !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--cyan) !important;
+}
+.nav-link.active {
+    color: var(--cyan) !important;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    background-color: var(--navy);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 0;
+    min-width: 200px;
+    padding: 0;
+}
+.dropdown-item {
+    color: #cce8ff !important;
+    font-size: 0.82rem;
+    padding: 0.55rem 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.dropdown-item:last-child { border-bottom: none; }
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(0, 212, 255, 0.12);
+    color: var(--cyan) !important;
+}
+.dropdown-toggle::after {
+    margin-left: 0.3em;
+}
+
+/* ── Hero / Page Title ────────────────────────────────────── */
+.hero-section {
+    position: relative;
+    background: var(--navy-deep);
+    background-image: linear-gradient(rgba(0,21,30,0.78), rgba(0,21,30,0.88)),
+                      url('../assets/img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 110px 0;
+    text-align: center;
+}
+
+.page-title-section {
+    background: var(--navy-deep);
+    background-image: linear-gradient(rgba(0,21,30,0.82), rgba(0,21,30,0.92)),
+                      url('../assets/img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* ── Countdown Sidebar ────────────────────────────────────── */
+.sidebar-timer {
+    background: var(--navy);
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+.countdown-box {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 8px;
+    border-radius: 4px;
+    min-width: 58px;
+}
+.count-num {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cyan);
+    display: block;
+    line-height: 1.1;
+}
+.count-label {
+    font-size: 0.52rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+/* ── Important Dates Sidebar ──────────────────────────────── */
+.important-dates {
+    background: #f8f9fa;
+    border-left: 5px solid var(--blue);
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 25px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+.important-dates li {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+.important-dates li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* ── Section headings with cyan underline ─────────────────── */
+.section-heading {
+    color: var(--navy);
+    border-bottom: 3px solid var(--cyan);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* ── Member / info cards ──────────────────────────────────── */
+.member-card {
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border-left: 4px solid var(--blue);
+    border-radius: 0 4px 4px 0;
+    transition: transform 0.18s, background 0.18s;
+}
+.member-card:hover {
+    transform: translateX(4px);
+    background: #eef2ff;
+}
+.role-title {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+.member-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    display: block;
+    margin-top: 2px;
+}
+.member-affiliation {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+}
+
+/* ── Table shared styles ──────────────────────────────────── */
+.table-navy thead {
+    background-color: var(--navy);
+    color: #fff;
+}
+.date-highlight {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* ── Info / venue cards ───────────────────────────────────── */
+.info-card {
+    background: #f8f9fa;
+    border-top: 4px solid var(--blue);
+    padding: 25px;
+    height: 100%;
+    border-radius: 0 0 8px 8px;
+}
+
+/* ── Announcement / news bar ──────────────────────────────── */
+.news-bar {
+    background: var(--cyan);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.news-bar .marquee {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+footer.site-footer {
+    background-color: #0a0a0a;
+    color: #ccc;
+    padding: 40px 0 20px;
+}
+footer.site-footer a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+footer.site-footer a:hover { text-decoration: underline; }
+footer.site-footer .footer-divider {
+    border-color: rgba(255,255,255,0.1);
+    margin: 20px 0;
+}
+
+/* ── Responsive tweaks ────────────────────────────────────── */
+@media (max-width: 991px) {
+    .navbar { font-size: 0.9rem; }
+    .dropdown-menu { border: none; background: rgba(0,31,63,0.95); }
+}
