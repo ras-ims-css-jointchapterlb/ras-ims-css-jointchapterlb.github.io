@@ -332,3 +332,43 @@ footer.site-footer .footer-divider {
     text-align: center;
     line-height: 1.4;
 }
+
+
+/* Uniform cards for Sponsors & Partners page */
+
+.sponsor-grid > div {
+    display: flex;
+}
+
+.sponsor-grid > div > .p-4.border.rounded {
+    width: 100%;
+    height: 220px;
+    padding: 20px !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Same display area for every logo */
+.sponsor-grid img {
+    width: 100%;
+    max-width: 260px;
+    height: 90px;
+    max-height: 90px !important;
+    object-fit: contain;
+}
+
+/* Same text area for every organization */
+.sponsor-grid p {
+    min-height: 60px;
+    margin: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.4;
+}
