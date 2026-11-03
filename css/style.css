@@ -296,46 +296,8 @@ footer.site-footer .footer-divider {
     .dropdown-menu { border: none; background: rgba(0,31,63,0.95); }
 }
 
-/* Uniform sponsor and partner cards */
 
-.sponsor-card {
-    width: 100%;
-    height: 240px;
-    padding: 20px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    background-color: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    box-sizing: border-box;
-}
-
-/* Consistent logo display area */
-.sponsor-card img {
-    width: 100%;
-    max-width: 280px;
-    height: 105px;
-    object-fit: contain;
-}
-
-/* Consistent organization name alignment */
-.sponsor-card p {
-    min-height: 48px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.4;
-}
-
-
-/* Uniform cards for Sponsors & Partners page */
-
+/* Uniform sponsor cards */
 .sponsor-grid > div {
     display: flex;
 }
@@ -344,31 +306,51 @@ footer.site-footer .footer-divider {
     width: 100%;
     height: 220px;
     padding: 20px !important;
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 12px;
+    text-align: center;
 }
 
-/* Same display area for every logo */
+/* Logos: same area, centered */
 .sponsor-grid img {
+    display: block;
     width: 100%;
     max-width: 260px;
     height: 90px;
     max-height: 90px !important;
     object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+    flex-shrink: 0;
 }
 
-/* Same text area for every organization */
+/* Organization names: centered */
 .sponsor-grid p {
+    width: 100%;
     min-height: 60px;
     margin: 0 !important;
+    padding: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     line-height: 1.4;
+}
+
+/* Larger logos for Organizing Bodies */
+.organizing-grid img {
+    max-width: 100%;
+    height: 120px;
+    max-height: 120px !important;
+}
+
+/* Slightly reduce text area for organizing bodies */
+.organizing-grid p {
+    min-height: 48px;
 }
